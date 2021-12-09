@@ -78,6 +78,11 @@
         $("#display").addClass("bg-primary");
         $("#display").html(results.count);
       })
+      .catch(function(error) {
+        $("#display").removeClass();
+        $("#display").addClass("bg-warning");
+        $("#display").html("count fail:" + JSON.stringify(error));
+      })
       //$("#display").html("count does not work");
     }
 
